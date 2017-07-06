@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>.io</title>
+  <style>
+    .disable{
+      display: none;
+    }
+    .enable{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="infoScene" class="enable">
+    <h1>Info Scene</h1>
+    <input type="text" placeholder="Enter Your Nickname" id="name" />
+    <button id="startButton">start button</button>
+  </div>
+  <div id="gameScene" class="disable">
+    <canvas id="canvas" height="1000" width="1000"></canvas>
+  </div>
+  <div id="standingScene" class="disable">
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/bundle.js"></script>
+</body>
+</html>

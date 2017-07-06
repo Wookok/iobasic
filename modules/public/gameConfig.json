@@ -1,0 +1,21 @@
+{
+  "INTERVAL" : 30,
+
+  "CANVAS_MAX_SIZE" : {"width" : 11200 , "height" : 11200},
+  "CANVAS_MAX_LOCAL_SIZE" : {"width" : 1600, "height" : 1600},
+
+  "OBJECT_STATE_IDLE" : 0,
+  "OBJECT_STATE_MOVE" : 1,
+
+  "FPS" : 60,
+  "PLUS_SIZE_WIDTH" : 500,
+  "PLUS_SIZE_HEIGHT" : 500,
+
+  "OBJECT_STATE_MOVE_OFFSET" : 99,
+
+  "GAME_STATE_LOAD" : 0,
+  "GAME_STATE_START_SCENE" : 1,
+  "GAME_STATE_GAME_START" : 2,
+  "GAME_STATE_GAME_ON" : 3,
+  "GAME_STATE_GAME_END" : 4
+}

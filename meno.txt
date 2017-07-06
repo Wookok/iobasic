@@ -1,0 +1,32 @@
+setupSocket : socket.on 관련 설정
+ > setGlobalSetting : canvasMaxSize 설정
+ > setCorrespondUser : this user 설정 및 userOffset 설정, 매니저 생성
+ > resStartGame : 매니저에 this user 설정 및 userData 설정 게임 시작(infoScene : disable gameScene : enable)
+                  canvasSetting() : 캔버스 이벤트 등록 > drawScreen();
+ > userJoined : 유저가 게임에 조인한 경우 실행
+ > resMove : 이동 실행 this user 일 경우 offset 설정
+ > resSetCanvasSize :  캔버스 사이즈 변경 시 실행 setCanvasSize();
+
+ startButton click > 이름 입력 체크 > setupSocket() > reqStartGame() > reqSetCanvasSize();
+
+ reqStartGame() : 시작 요청
+ reqSetCanvasSize() :  캔버스 크기 변경
+ canvasSetting() : click 이벤트 등록 drawScreen();
+ drawScreen() :  백그라운드 유저 drawScreen
+ setCanvasSize() :  미완 canvas size 재 새팅
+
+
+connection >> this user 생성, localConfig(캔버스 및 localOffset)
+
+reqSetCanvasSize >> scaleFactor 설정, localConfig.canvasSize 생성, resSetCanvasSize
+reqStartGame >> GM 인터발 start, user 초기화 및 GM 에 조인, user update start
+              > setCorrespondUser, setGlobalSetting, userJoined
+              > resStartGame
+reqMove >> GM 에 무브 요청. public 유저 무브 resMove
+disconnect
+
+
+설정 필요
+client : Manager생성(gameConfig) user 생성 this.user 동기화, canvas size 설정 offset 설정
+
+server : Manager생성(전역) user 생성, user 생성 및 start
